@@ -18,6 +18,8 @@ function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive');
 }
 
+
+
 function toggleMobileMenu() {
     const ismenuCarritoClosed = menuCarrito.classList.contains('inactive');
     
@@ -29,9 +31,22 @@ function toggleMobileMenu() {
 
 function toggleCarritoMenu() {
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-    
+    const isDesktopMenu = desktopMenu.classList.contains('inactive');
+
     if(!isMobileMenuClosed) {
         mobileMenu.classList.add('inactive');
+    }  else if(!isDesktopMenu) {
+        desktopMenu.classList.add('inactive');
     }
+    /* menuCarrito.classList.toggle('inactive'); */
+   
     menuCarrito.classList.toggle('inactive');
-}
+    }
+
+    const productList = [];
+    productList.push({
+        name: 'bike',
+        price: 250,
+        img: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    });
+
