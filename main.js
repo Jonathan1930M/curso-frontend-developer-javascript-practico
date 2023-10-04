@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const carritoIcon = document.querySelector('.navbar-shopping-cart');
 const menuHamIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
-const menuCarrito = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 /* const mainContainer = document.querySelector('.main-container'); */
 
@@ -12,10 +12,10 @@ menuHamIcon.addEventListener('click', toggleMobileMenu);
 carritoIcon.addEventListener('click', toggleCarritoMenu);
 
 function toggleDesktopMenu() {
-    const ismenuCarritoClosed = menuCarrito.classList.contains('inactive');
+    const isshoppingCartContainerClosed = shoppingCartContainer.classList.contains('inactive');
     
-    if(!ismenuCarritoClosed) {
-        menuCarrito.classList.add('inactive');
+    if(!isshoppingCartContainerClosed) {
+        shoppingCartContainer.classList.add('inactive');
     }
     desktopMenu.classList.toggle('inactive');
 }
@@ -23,10 +23,10 @@ function toggleDesktopMenu() {
 
 
 function toggleMobileMenu() {
-    const ismenuCarritoClosed = menuCarrito.classList.contains('inactive');
+    const isshoppingCartContainerClosed = shoppingCartContainer.classList.contains('inactive');
     
-    if(!ismenuCarritoClosed) {
-        menuCarrito.classList.add('inactive');
+    if(!isshoppingCartContainerClosed) {
+        shoppingCartContainer.classList.add('inactive');
     }
     mobileMenu.classList.toggle('inactive');
 }
@@ -42,7 +42,7 @@ function toggleCarritoMenu() {
     }
     /* menuCarrito.classList.toggle('inactive'); */
    
-    menuCarrito.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
     }
 
     const productList = [];
@@ -61,29 +61,6 @@ function toggleCarritoMenu() {
         price: 630,
         img: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     });
-     productList.push({
-        name: 'Iphone',
-        price: 900,
-        img: 'https://images.pexels.com/photos/5083491/pexels-photo-5083491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    });
-    productList.push({
-        name: 'Xbox Controller',
-        price: 250,
-        img: 'https://images.pexels.com/photos/16776031/pexels-photo-16776031/free-photo-of-internet-conexion-tecnologia-negocio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    });
-    productList.push({
-        name: 'Xbox Play Station',
-        price: 300,
-        img: 'https://images.pexels.com/photos/14824332/pexels-photo-14824332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    });
-    productList.push({
-        name: 'Jordan retro 1',
-        price: 200,
-        img: 'https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=600'
-    });
-
-    /* const parrafo = document.createElement('p'); */
-
 
 function addProduct(arr) {
     for (product of arr) {
